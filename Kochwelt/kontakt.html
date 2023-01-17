@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt - Kontakt</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="kontakt.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/logo_small.png">
+</head>
+
+<body onload="includeHTML()">
+    <header>
+        <div w3-include-html="header.html"></div>
+    </header>
+    <main>
+        <form action="http://f014d719@faruk-emen.developerakademie.net/send_mail.php" method="post">
+            <h2>Wir freuen uns über Ihre Nachricht!</h2>
+            <div class="div-label-name">
+                <div class="label-name">
+                    <label for="">Ihr Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="label-name">
+                    <label for="">Ihre E-Mail-adresse</label>
+                    <input type="email" name="email">
+                </div>
+            </div>
+            <div class="div-textarea">
+                <div class="label-name">
+                    <label for="">Ihre Frage/Anliegen</label>
+                </div>
+                <textarea name="message" id="" cols="30" rows="10" required></textarea>
+            </div>
+            <div class="div-button">
+                <button type="submit">Senden</button>
+            </div>
+            <div class="info-text">
+                <p>Zu dem Umgang mit den hier erhobenen Daten informieren wir in unserer <a href="datenschutz.html">Datenschutzerklärung</a></p>
+            </div>
+            
+        </form>
+    </main>
+    <footer>
+        <div w3-include-html="footer.html"></div>
+    </footer>
+</body>
+
+</html>

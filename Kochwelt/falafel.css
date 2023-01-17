@@ -1,0 +1,257 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.first-container {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 200px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.first-container h1 {
+    margin-bottom: 20px;
+}
+
+#test #img {
+    max-height: 150px;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+    cursor: pointer;
+    object-fit: cover;
+    box-shadow: 2px 2px 6px 1px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#test #img:hover {
+    max-height: 300px;
+    transition: max-height 0.25s ease-in;
+}
+
+.first-container .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    margin: 20px 0 70px 0;
+}
+
+.first-container .col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    border-radius: 10px;
+}
+
+.first-container .col img {
+    width: 12px;
+    height: 12px;
+    padding-right: 5px;
+}
+
+.first-container .col p {
+    font-size: 12px;
+}
+
+/*--------------------------------------------------------*/
+.second-container {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 200px;
+    box-sizing: border-box;
+}
+
+.second-container .row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.second-container .row p {
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.row input {
+    text-align: center;
+    max-width: 80px;
+    padding: 10px 0;
+    border-radius: 20px 0 0 20px;
+    border: 1px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: inherit;
+}
+
+.row input:hover {
+    outline: 0;
+    border-color: #3b8047;
+}
+
+.row button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+    border-radius: 0 20px 20px 0;
+    border: 1px solid #3b8047;
+    background-color: #3b8047;
+    color: white;
+    height: 41px;
+    font-weight: bold;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.row button:hover {
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+.first-col {
+    display: flex;
+    flex-direction: column;
+}
+
+tr:nth-last-of-type(even) {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.td-left {
+    width: 120px;
+    padding: 10px 0 10px 100px;
+    word-spacing: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.td-right {
+    padding: 10px 0 10px 50px;
+    font-family: Arial, sans-serif;
+}
+
+/*----------------------------------------------------*/
+
+.third-container {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 200px;
+    box-sizing: border-box;
+}
+
+.third-container .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    margin: 20px 0 30px 0;
+}
+
+.third-container .col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+    border-radius: 10px;
+}
+
+.third-container .col img {
+    width: 12px;
+    height: 12px;
+    padding-right: 5px;
+}
+
+.third-container .col p {
+    font-size: 12px;
+}
+
+.third-container span {
+    margin-bottom: 20px;
+}
+
+.third-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 180px;
+    border-radius: 25px;
+    border: 2px solid green;
+    padding: 10px;
+    outline: 0;
+    background-color: white;
+    color: green;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.button-heart {
+    background-color: #ff6067 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.third-container button:hover {
+    opacity: .7;
+}
+
+.third-container i {
+    padding-right: 5px;
+}
+
+.profil {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.profil img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.profil p {
+    position: relative;
+    left: 70px;
+    bottom: 35px;
+    font-weight: bold;
+}
+
+.rezept-button {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media (max-width: 678px) {
+    .first-container {
+        margin: 25px 50px;
+    }
+    .second-container {
+        margin: 25px 50px;
+    }
+    .third-container {
+        margin: 25px 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rezept-button {
+        flex-direction: column;
+    }
+
+    .td-left {
+        padding: 10px 0 10px 16px;
+    }
+}

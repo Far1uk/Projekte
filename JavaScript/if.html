@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        let images = ['./img/1.png', './img/2.png', './img/3.png', './img/4.png', './img/5.png'];
+        let currentImage = 0;
+
+        function start() {
+            let milliseconds = +document.getElementById('inputField').value * 1000;
+
+            if (milliseconds > 10000) {
+                alert('Bitte kleinere Zahlen eingeben.');
+            } else {
+                if (milliseconds < 1000) {
+                    alert('Bitte mindestens eine Sekunde eingeben');
+                } else {
+                    showImage(currentImage);
+                    currentImage++;
+
+                    if (currentImage == 5) {
+                        currentImage = 0;
+                    }
+                    setTimeout(start, milliseconds);
+                }
+            }
+        }
+
+        function showImage(i) {
+            document.getElementById('images').src = images[i];
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="number" id="inputField" placeholder="Wie viele Sekunden?"><button onclick="start()">Start</button>
+    <br>
+    <br>
+    <img src="./img/1.png" id="images">
+
+</body>
+
+</html>

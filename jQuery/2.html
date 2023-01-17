@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hallo</h3>
+    <input type="text" placeholder="your name">
+    <p>dein name hat <span>0 </span>zeichen</p>
+    <button type="button">Klcick</button>
+    <script src="jquery-3.6.2.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                // aktion auf das event
+                $(this).hide();
+            });
+
+            $("h3").hover(function() {
+                $(this).css("color", "red");
+            }, function() {
+                $(this).css("color", "black");
+            });
+
+            // Keypress 
+            let i = 0;
+            $("input").keypress(function() {
+                $("span").text( i += 1)
+            });
+
+            // Focus
+            $("input").focus(function() {
+                $(this).css("background-color", "lightblue")
+            });
+
+            // Blur
+            $("input").blur(function() {
+                $(this).css("background-color", "lightgrey")
+            });
+        });
+    </script>
+</body>
+</html>

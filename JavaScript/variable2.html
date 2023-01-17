@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name;
+
+        function saveName() {
+            name = document.getElementById('input').value;
+            // let name = 'lastVisitor'
+            localStorage.setItem('lastVisitor', name); // eine Variable speichern ->'lastVisitor' und den Wert der eingegeben wurde
+
+            document.getElementById('headline').innerHTML = `Hallo ${name}`;
+        }
+
+        function loadName() {
+            let name = localStorage.getItem('lastVisitor');
+            document.getElementById('headline').innerHTML = ` Zuletzt war hier ${name}`;
+        }
+    </script>
+</head>
+<body>
+
+    <h1 id="headline"></h1>
+
+    <button onclick="loadName()">Wer war zuletzt hier?</button>
+    <input id="input">
+    <button onclick="saveName()">Speichern</button>
+
+</body>
+</html>

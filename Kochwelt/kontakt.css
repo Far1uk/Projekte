@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+form {
+    box-sizing: border-box;
+    background-color: rgba(50, 50, 50, .14);
+    width: 100%;
+    height: 100vh;
+    padding: 50px 50px;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    margin-bottom: 50px;
+}
+
+.div-label-name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.label-name {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.label-name label {
+    color: #747474;
+    font-size: 14px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.label-name input {
+    width: 150px;
+    border-radius: 0;
+    border: 1px solid #747474;
+    padding: 6px 15px;
+    color: #747474;
+    background-color: #fff;
+}
+
+.div-textarea {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.div-textarea textarea {
+    width: 500px;
+    border-radius: 0;
+    color: #747474;
+    padding: 10px 10px;
+    background-color: #fff;
+}
+
+.info-text {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.info-text a {
+    text-decoration: none;
+    color: #747474;
+}
+
+.div-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 500px;
+}
+
+.div-button button{
+    width: 100px;
+    height: 32px;
+    margin-top: 20px;
+    border: 1px solid #747474;
+    border-radius: 5px;
+    background-color: #747474;
+    color: #fff;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.div-button button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 680px) {
+    form h2 {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    .div-label-name {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .label-name label {
+        margin-bottom: 5px;
+    }
+    .div-textarea textarea {
+        width: 300px;
+    }
+    .info-text {
+        width: 300px;
+    }
+    .div-button {
+        width: 250px;
+    }
+}

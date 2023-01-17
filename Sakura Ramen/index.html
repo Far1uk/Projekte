@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Ramen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Economica:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <section class="img-and-nav">
+            <div>
+                <img class="img-saku" src="./img/saku.png">
+            </div>
+            <nav class="nav display-none">
+                <a id="nav-menu" class="nav-points" href="#menu">Speisekarte</a>
+                <a id="nav-location" class="nav-points" href="#location">Anfahrt</a>
+                <a id="nav-about" class="nav-points" href="#">Über uns</a>
+                <a class="tel-button" href="tel:+(49)01627391564"><img class="img-phone"
+                        src="./img/phone.png">01627391564</a>
+            </nav>
+            <div class="translater">
+                <a onclick="translateGerman()" href="#"><img class="image-flag" src="./img/germanyFlag.png"></a>
+                <a onclick="translateEnglish()" href="#"><img class="image-flag" src="./img/englandFlag.png"></a>
+            </div>
+        </section>
+        <section class="headline-header">
+            <h1>SAKURA RAMEN</h1>
+            <h4 id="h4">DER BESTE RAMEN IN DER STADT</h4>
+        </section>
+    </header>
+    <main>
+        <section class="order">
+                <h2 id="order-box">WIE MAN BESTELLT</h2>
+            <div class="order-box">
+                <div class="order-content">
+                    <img class="order-image" src="./img/bowl_icon.jpg">
+                    <p id="order-content-noodle">Wähle<br>deine Nudeln</p>
+                </div>
+                <div class="order-content">
+                    <img class="order-image" src="./img/broth_icon.png">
+                    <p id="order-content-broth">Wähle<br>deine Brühe</p>
+                </div>
+                <div class="order-content">
+                    <img class="order-image" src="./img/eggs_icon.jpg">
+                    <p id="order-content-tooping">Wähle<br> deinen Belag</p>
+                </div>
+            </div>
+        </section>
+        <section class="menu">
+            <h2 id="menu">SPEISEKARTE</h2>
+            <div id="tonkasu" class="menu-list">
+                <div class="menu-image-content">
+                    <img class="menu-image" src="./img/r1.png">
+                </div>
+                <div class="menu-box">
+                    <h3>Tonkasu Ramen</h3>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>HÄHNCHEN</td>
+                                <td>11,95€</td>
+                            </tr>
+                            <tr>
+                                <td>RIND</td>
+                                <td>12,95€</td>
+                            </tr>
+                            <tr>
+                                <td>GARNELE</td>
+                                <td>13,95€</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="spicy" class="menu-list menu-box-reverse">
+                <div class="menu-box menu-list-reverse">
+                    <h3>Spicy Miso Ramen</h3>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>HÄHNCHEN</td>
+                                <td>11,95€</td>
+                            </tr>
+                            <tr>
+                                <td>RIND</td>
+                                <td>12,95€</td>
+                            </tr>
+                            <tr>
+                                <td>GARNELE</td>
+                                <td>13,95€</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu-image-content">
+                    <img class="menu-image reverse-image" src="./img/r2.png">
+                </div>
+            </div>
+            <div id="shio" class="menu-list">
+                <div class="menu-image-content">
+                    <img class="menu-image" src="./img/r3.png">
+                </div>
+                <div class="menu-box">
+                    <h3>Shio Ramen</h3>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>HÄHNCHEN</td>
+                                <td>11,95€</td>
+                            </tr>
+                            <tr>
+                                <td>RIND</td>
+                                <td>12,95€</td>
+                            </tr>
+                            <tr>
+                                <td>GARNELE</td>
+                                <td>13,95€</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="location" id="location">
+            <div>
+                <h2 id="findUs">FINDEN SIE UNS</h2>
+            </div>
+            <div class="location-content">
+                <img class="location-image" src="./img/LO.png">
+                <p>Max-Mustermann-Str.1, Köln 12345</p>
+            </div>
+        </section>
+        <section>
+            <iframe class="navigation"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d321684.104278046!2d6.687132320784689!3d50.95780025397484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf259169ab2fe5%3A0x42760fc4a2a77f0!2zS8O2bG4!5e0!3m2!1sde!2sde!4v1665591041248!5m2!1sde!2sde"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+    <footer>
+        <section class="footer">
+            <div>
+                <img class="logo-image" src="./img/saklogo.png">
+            </div>
+            <div class="social-media">
+                <img class="social-media-image" src="./img/fb.png">
+                <img class="social-media-image" src="./img/ins.png">
+                <img class="social-media-image" src="./img/tripad.png">
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

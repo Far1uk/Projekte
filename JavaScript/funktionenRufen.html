@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Funktion rufen andere Funktionen auf</h1>
+
+    <input><button onclick="greetButton()">Grüße</button> <!-- Diese Funktion ruft.. --> 
+
+    <p id="greeting"></p>
+
+    <script>
+        function greetButton() { /* .. die Funktion greet('Faruk') auf */
+            greet('Faruk');
+        }
+
+        function greet(name) {
+            document.getElementById('greeting').innerHTML = `Hallo ${name}`;
+        }
+    </script>
+    
+</body>
+</html>

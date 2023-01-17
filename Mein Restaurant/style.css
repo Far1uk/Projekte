@@ -1,0 +1,59 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Gotu', sans-serif;
+    margin: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bg1 {
+    padding-left: 140px !important;
+    padding-right: 140px !important;
+    padding: 8px;
+    background-color: rgb(230, 230, 230);
+}
+
+.bg2 {
+    padding-left: 140px !important;
+    padding-right: 140px !important;
+    padding: 8px;
+    background-color: rgb(200, 200, 200);
+}
+
+.menu {
+    position: absolute;
+    padding: 8px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.footer{
+    display: flex;
+    padding: 40px;
+    background-color: #545454;
+    justify-content: space-between;
+}
+
+.footerChild{
+    width: 30%;
+    color: white;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name = ['Faruk','Svea','Emen'];
+
+        function showName(i) {
+            document.getElementById('nameList').innerHTML = '';
+
+            for(let i = 0; i < name.length; i++) {
+                document.getElementById('nameList').innerHTML += `<li>${name[i]} <a href="#" onclick="deleteName(${i})">X</a></li>`;
+            }
+        }
+
+        function addName() {
+            let newName = document.getElementById('inputName').value;
+            name.push(newName);
+            showName();
+            document.getElementById('inputName').value = '';
+        }
+
+        function deleteName(position) {
+            name.splice(position, 1);
+            showName();
+        }
+    </script>
+</head>
+<body onload="showName()">
+    <ul id="nameList"></ul>
+
+    <input id="inputName"><button onclick="addName()">Add Name</button>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <h2>Was ist jQuery?</h2>
+    <p>jQuery ist eine JavaScript-Bibliothek, die Webentwicklern die Arbeit mit JavaScript erleichtern soll.</p>
+    <button type="button">Lösche das Element</button>
+    <script src="jquery-3.6.2.js"></script>
+    <script>
+        // Sicher sein das, dass Dokument vollständig geladen ist bevor wir jQuery anwenden
+        // erstmal alle HTML Elemente laden, wenn das abgeschlossen ist, dann den Code anwenden
+        $(document).ready(function() { // sobald das Dokument ready ist, wird ausgeführt
+            $('button').click(function(){
+                $('p').hide();
+            })
+
+            // alles auswählen
+            $("*")
+
+            // Elemente
+            $("h1")
+            $("p")
+
+            // ID
+            $("#test")
+
+            // Klasse
+            $(".test")
+
+            // nur das erste Element auswählen
+            $("test li:first")
+        });
+    </script>
+</body>
+</html>

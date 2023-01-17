@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lieferando</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="init()">
+    <section>
+      <header>
+        <div class="row-header-img">
+          <p><i class="fa-solid fa-house-chimney"></i></p>
+          <p>MealDelivery</p>
+        </div>
+        <div class="row-header">
+          <p>Speisekarte</p>
+        </div>
+        <div class="row-menu">
+          <img src="./img/germanyFlag.png" />
+          <p onclick="openDialog()"><i class="fa-solid fa-bars"></i></p>
+        </div>
+        <div class="dialog" id="dialog">
+          <div class="dialog-content" id="dialog-content">
+            <div class="dialog-header">
+              <p>Mein Account</p>
+              <p onclick="closeDialog()"><i class="fa-solid fa-xmark"></i></p>
+            </div>
+            <div class="dialog-login">
+              <p>Anmelden</p>
+              <p>Account erstellen</p>
+            </div>
+            <div class="dialog-list">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-bag-shopping"></i>
+                  <p>Bestellungen</p>
+                </li>
+                <li>
+                  <i class="fa-regular fa-heart"></i>
+                  <p>Favoriten</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-gift"></i>
+                  <p>Punkte</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-stamp"></i>
+                  <p>Stempelkarten</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-info"></i>
+                  <p>Brauchst du Hilfe?</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-gifts"></i>
+                  <p>Geschenkkarten</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-car-side"></i>
+                  <p>Fahrer*in werden</p>
+                </li>
+                <li>
+                  <i class="fa-regular fa-building"></i>
+                  <p>Lieferando for business</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+    <section>
+      <main>
+        <div class="row-main-img">
+          <img src="./img/falafel.jpg" />
+          <img src="./img/vegan.jpg" />
+        </div>
+        <div class="row-main-header">
+          <h1>Veganland Köln</h1>
+          <div class="row-main-header-icon">
+            <p><i class="fa-solid fa-circle-info"></i></p>
+            <p><i class="fa-regular fa-heart"></i></p>
+          </div>
+        </div>
+        <div class="row-main-rating">
+          <p><i class="fa-solid fa-star"></i></p>
+          <p><i class="fa-solid fa-star"></i></p>
+          <p><i class="fa-solid fa-star"></i></p>
+          <p><i class="fa-solid fa-star"></i></p>
+          <p><i class="fa-solid fa-star-half"></i></p>
+          <a href="#">111 Bewertungen</a>
+        </div>
+        <div class="row-main-delivery">
+          <div class="row-main-delivery-icon">
+            <p><i class="fa-regular fa-clock"></i></p>
+            <p>20-25 Min.</p>
+          </div>
+          <div class="row-main-delivery-icon">
+            <p><i class="fa-solid fa-car"></i></p>
+            <p>2,00 €</p>
+          </div>
+          <div class="row-main-delivery-icon">
+            <p><i class="fa-solid fa-bag-shopping"></i></p>
+            <p>Min. 15,00 €</p>
+          </div>
+          <div class="row-main-delivery-icon">
+            <p><i class="fa-solid fa-square-plus"></i></p>
+            <p>Kostenlose Lieferung ab 50,00 €</p>
+          </div>
+        </div>
+        <div class="row-main-content">
+          <p>Bei diesem Restaurant kannst du Stempel sammeln. Stelle beim Bestellabschluss bitte sicher, dass du dich für unseren Newsletter angemeldet hast, um deine Stempel per E-Mail zu erhalten.</p>
+        </div>
+        <div class="row-header-menu">
+          <h2>Party-Menüs</h2>
+        </div>
+      </main>
+    </section>
+    <div id="list"></div>
+    <div id="basket"></div>
+  </body>
+</html>

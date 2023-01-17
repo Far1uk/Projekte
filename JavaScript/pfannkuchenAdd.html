@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            background-color: rgb(218, 218, 218);
+            border-collapse: collapse;
+        }
+
+        table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+        }
+
+        table th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        table tr {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rezept Pfannkuchen</h1>
+
+    <button onclick="buttonIngrendient()">Zutaten laden</button>
+    <br>
+    <br>
+    <table id="table">
+        <tr>
+            <th>Menge</th>
+            <th>Name</th>
+        </tr>
+    </table>
+    <br>
+    <input placeholder="Menge eingeben" id="menge">
+    <input placeholder="Namen eingeben" id="name">
+    <button onclick="addNewIngrendient()">Hinzufügen</button>
+
+    <script>
+        function addNewIngrendient() {
+            let menge = document.getElementById('menge').value;
+            let name = document.getElementById('name').value;
+            addIngrendient(menge, name);
+            document.getElementById('menge').value = '';
+            document.getElementById('name').value = '';
+        }
+
+        function buttonIngrendient() {
+            addIngrendient(1, 'Brokkoli');
+            addIngrendient(2, 'Zwiebeln');
+            addIngrendient('400g', 'Champignons');
+            addIngrendient(3, 'Zucchini');
+
+        }
+
+        function addIngrendient(menge, name) {
+            document.getElementById('table').innerHTML += `
+            <tr>
+                <td>${menge}</td>    
+                <td>${name}</td>    
+            </tr>
+            `;
+        }
+    </script>
+</body>
+
+</html>

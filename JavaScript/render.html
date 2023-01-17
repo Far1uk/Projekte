@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render</title>
+    <style>
+        .card {
+            box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%);
+            padding: 8px;
+            margin-bottom: 32px;
+        }
+    </style>
+    <script>
+        let names = ['Faruk Emen', 'Svea Emen'];
+        let phones = ['01513456789', '01637654321'];
+        load(); /* es muss als erster laden */
+
+        function load() {
+            let namesAsText = localStorage.getItem('names');
+            let phoneAsText = localStorage.getItem('phones');
+            if (namesAsText && phoneAsText) { /* abfragen ob die beiden variablen existieren */
+                names = JSON.parse(namesAsText);
+                phones = JSON.parse(phoneAsText);
+            }
+        }
+
+        function save() { /* localstorage speichert nur text und kein array */
+            let namesAsText = JSON.stringify(names);
+            let phoneAsText = JSON.stringify(phones); /* den array names in ein text umwandeln */
+            localStorage.setItem('names', namesAsText);
+            localStorage.setItem('phones', phoneAsText); /* diesen text wird in der localstorage gespeichert */
+        }
+
+        function deleteContact(test) {
+            names.splice(test, 1);
+            phones.splice(test, 1);
+            render();
+            save();
+        }
+
+        function addContact() {
+            let name = document.getElementById('name').value;
+            let phone = document.getElementById('phone').value;
+
+            names.push(name);
+            phones.push(phone);
+            render();
+            save();
+        }
+
+        function render() { /* HTML Code erstellen */
+            let content = document.getElementById('content'); /* div an Veriable binden */
+            content.innerHTML = ''; /* div leeren */
+            content.innerHTML += `<h1>My Contacts</h1>`;
+            content.innerHTML += `
+                <input type="text" placeholder="Name" id="name">
+                <input type="text" placeholder="Telefonnummer" id="phone">
+                <button onclick="addContact()">Hinzufügen</button>
+            `;
+
+            for (let i = 0; i < names.length; i++) {
+                const name = names[i];
+                const phone = phones[i];
+
+                content.innerHTML +=  `
+                    <div class="card">
+                        <b>Name: ${name}</b><br>
+                        <b>Telefon: ${phone}</b>
+                        <button onclick="deleteContact(${i})">Löschen</button> <!-- i wird aus der for-Schleife eingesetzt -->
+                    </div>
+                `;
+            }
+        }
+    </script>
+</head>
+
+<body onload="render()">
+    <div id="content"></div>
+</body>
+
+</html>

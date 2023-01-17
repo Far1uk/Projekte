@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let list = [];
+
+        function saveList() {
+            let newInput = document.getElementById('myInput').value;
+            list.push(newInput);
+            setList('keyList', newInput);
+            document.getElementById('headline').innerHTML = `Du hast ${newInput} in die Liste eingefügt.`;
+        }
+
+        function loadList() {
+            let allInput = getList('keyList');
+            document.getElementById('headline').innerHTML = `Liste der Einträge: ${allInput}`;
+        }
+
+        function setList(key, array) { //ein array speicheren
+            localStorage.setItem(key, JSON.stringify(array));
+        }
+
+        function getList(key) { // ein array laden
+            return JSON.parse(localStorage.getItem(key));
+        }
+    </script>
+</head>
+<body>
+    <h1 id="headline"></h1>
+    
+    <button onclick="loadList()">Liste</button>
+
+    <input id="myInput">
+
+    <button onclick="saveList()">Speichern</button>
+</body>
+</html>
+
+
+<tr class="second-tr">
+    <td class="first-td">¼ Scheibe(n)</td>
+    <td>Toastbrot, altbackenes</td>
+</tr>
+<tr class="first-tr">
+    <td class="first-td">¼</td>
+    <td>Zwiebel(n)</td>
+</tr>
+<tr class="second-tr">
+    <td class="first-td">1</td>
+    <td>Knoblauchzehe(n)</td>
+</tr>
+<tr class="first-tr">
+    <td class="first-td">⅛ Bund</td>
+    <td>Petersilie</td>
+</tr>
+<tr class="second-tr">
+    <td class="first-td">½ TL</td>
+    <td>Korianderpulver</td>
+</tr>
+<tr class="first-tr">
+    <td class="first-td">½ TL</td>
+    <td>Kreuzkümmelpulver</td>
+</tr>
+<tr class="second-tr">
+    <td class="first-td"></td>
+    <td>Salz und Pfeffer</td>
+</tr>
+<tr class="first-tr">
+    <td class="first-td">¼ TL</td>
+    <td>Backpulver</td>
+</tr>
+<tr class="second-tr">
+    <td class="first-td">½ EL</td>
+    <td>Mehl</td>
+</tr>
+<tr class="first-tr">
+    <td class="first-td">¼ Liter</td>
+    <td>Öl zum Frittieren</td>
+</tr>
+<tr class="second-tr">
+    <td class="first-td">¼</td>
+    <td>Zitrone(n)</td>
+</tr>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calc() {
+            let number = +document.getElementById('inputNumber').value; // number = 2
+
+            alert(getElementNumber(number, powerOf2(number)));//die Variable number mit dem Wert 2 wird an die funktion powerOf2 weitergegeben
+        }
+
+        function powerOf2(x) { // hier wird die eingegebene 2 gerechnet
+            return x * x;
+        }
+
+        function getElementNumber(number, result) { // number = 2, result = 4
+            return `The result of ${number} is ${result}`;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="inputNumber"><button onclick="calc()">Calc</button>
+</body>
+
+</html>

@@ -1,0 +1,519 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0%;
+}
+
+/*Kopfbereich*/
+.header {
+    background-image: url(./img/bgr1.jpg);
+    height: 150vh;
+    background-size: cover;
+    background-position: center top;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    background-repeat: no-repeat;
+}
+
+.img-and-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-saku {
+    width: 80px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    font-size: 1.2em;
+    margin-left: 100px;
+}
+
+.nav-points {
+    color: white;
+    text-decoration: none;
+}
+
+.tel-button {
+    align-items: center;
+    display: flex;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    background-color: rgb(173, 29, 29);
+    border-radius: 5px;
+    border: 1px solid white;
+    text-shadow: 1px 1px 5px black;
+    text-decoration: none;
+}
+
+.tel-button:hover {
+    background-color: rgb(250, 0, 0);
+}
+
+.img-phone {
+    height: 24px;
+    padding-right: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.translater {
+    display: flex;
+    justify-content: space-around;
+    width: 80px;
+}
+
+.image-flag {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.headline-header {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin: 0%;
+    padding: 15% 5% 0% 5%;
+    font-size: 5em;
+}
+
+h4 {
+    margin: 0%;
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    padding: 70px;
+    font-size: 3em;
+    color: rgb(173, 29, 29);
+    margin: 0;
+}
+
+/*Hauptbereich*/
+.order-box {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 20px 100px 20px;
+    align-items: center;
+}
+
+.order-image {
+    width: 100px;
+}
+
+.order-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-content p {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Economica', sans-serif;
+}
+
+.menu {
+    font-family: 'Economica', sans-serif;
+    background-image: url(./img/background.jpg);
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu h2 {
+    font-family: 'Economica', sans-serif;
+    font-size: 5em;
+}
+
+.menu-list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.menu-list-reverse {
+    padding-right: 100px;
+}
+
+.reverse-image {
+    padding-right: 0px !important;
+}
+
+.menu-image {
+    width: 250px;
+    padding-right: 100px;
+}
+
+.menu-box {
+    width: 300px;
+}
+
+h3 {
+    font-size: 3em;
+    font-family: 'Economica', sans-serif;
+}
+
+table {
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: gray;
+}
+
+.location h2 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.location-content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    align-items: center;
+}
+
+.location p {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+.location-image {
+    width: 32px;
+    height: 32px;
+    padding-right: 10px;
+}
+
+/*Fußbereich*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.social-media {
+    padding-right: 50px;
+}
+
+.logo-image {
+    padding: 0px 50px 0px 50px;
+}
+
+.social-media-image {
+    width: 50px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 680px) {
+
+    /*Kopfbereich*/
+    .header {
+        min-height: 100vh;
+    }
+
+    .nav {
+        width: 70%;
+    }
+
+    .nav-points {
+        font-size: 1.5em;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .img-saku {
+        width: 50px;
+    }
+
+    .tel-button {
+        padding: 4px;
+    }
+
+    .img-phone {
+        height: 12px;
+    }
+
+    h1 {
+        font-size: 10vw;
+        padding: 60px 0px 10px 0px;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    /*Hauptbereich*/
+    h2 {
+        font-size: 6vw;
+        padding: 50px 0px 30px 0px;
+    }
+
+    .order-box {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .order-content {
+        padding-bottom: 20px;
+    }
+
+    .order-content p {
+        font-size: 4vw;
+        margin: 0%;
+        padding: 5px 0px 5px 0px;
+    }
+
+    .menu h2 {
+        font-size: 8vw;
+    }
+
+    .menu-image-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-image {
+        width: 150px;
+        padding: 0px;
+    }
+
+    h3 {
+        font-size: 6vw;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-top: 5px;
+    }
+
+    table {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5vw;
+    }
+
+    .menu-box {
+        width: 100%;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
+
+    .menu-list-reverse {
+        padding: 0%;
+    }
+
+    .menu-box-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /*location*/
+    .location-content {
+        padding: 10px;
+    }
+
+    .location p {
+        font-size: 1rem;
+    }
+
+    /*footer*/
+    .footer {
+        padding: 20px;
+    }
+
+    .logo-image {
+        width: 300px;
+        padding: 0px;
+    }
+
+    .social-media {
+        padding: 0px;
+    }
+
+    .social-media-image {
+        width: 40px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+     /*Kopfbereich*/
+     .header {
+        min-height: 50vh;
+    }
+
+    .nav {
+        width: 70%;
+    }
+
+    .nav-points {
+        font-size: 1.5em;
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    .img-saku {
+        width: 50px;
+    }
+
+    .tel-button {
+        padding: 4px;
+    }
+
+    .img-phone {
+        height: 12px;
+    }
+
+    h1 {
+        font-size: 10vw;
+        padding: 30px 0px 10px 0px;
+    }
+
+    h4 {
+        font-size: 3vw;
+    }
+
+    .image-flag {
+        height: 20px;
+        width: 20px;
+    }
+
+    /*Hauptbereich*/
+    h2 {
+        font-size: 6vw;
+        padding: 30px 0px 30px 0px;
+    }
+
+    .order-box {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .order-content {
+        padding-bottom: 20px;
+    }
+
+    .order-content p {
+        font-size: 4vw;
+        margin: 0%;
+        padding: 5px 0px 5px 0px;
+    }
+
+    .menu h2 {
+        font-size: 8vw;
+    }
+
+    .menu-image-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-image {
+        width: 150px;
+        padding: 0px;
+    }
+
+    h3 {
+        font-size: 6vw;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-top: 5px;
+    }
+
+    table {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5vw;
+    }
+
+    .menu-box {
+        width: 100%;
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 25px;
+    }
+
+    .menu-list-reverse {
+        padding: 0%;
+    }
+
+    .menu-box-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /*location*/
+    .location-content {
+        padding: 0px;
+    }
+
+    .location p {
+        font-size: 1rem;
+    }
+
+    .location-image{
+        width: 16px;
+        height: 16px;
+    }
+
+    /*navigation*/
+    .navigation {
+        height: 200px;
+    }
+
+    /*footer*/
+    .footer {
+        padding: 10px;
+    }
+
+    .logo-image {
+        width: 120px;
+        padding: 0px;
+    }
+
+    .social-media {
+        padding: 0px;
+    }
+
+    .social-media-image {
+        width: 20px;
+    }
+}

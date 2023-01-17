@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+    <link rel="icon" href="./img/logo_small.png">
+    <script src="jquery.js"></script>
+    <script src="header.js"></script>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 100px;
+        }
+
+        img {
+            padding-left: 32px;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+
+<body onload="includeHTML()">
+    <header>
+        <div w3-include-html="header.html"></div>
+    </header>
+    <main>
+        <h1>E-Mail wurde gesendet</h1>
+        <img src="./img/häckchen.png">
+    </main>
+    <footer>
+        <div w3-include-html="footer.html"></div>
+    </footer>
+</body>
+
+</html>

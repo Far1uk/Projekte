@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin:0%
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+            cursor: pointer;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /*.display-none {
+            display: none;
+        }*/
+        .display-none {
+            opacity: 0;
+            z-index: -1; /* setzt das Bild ganz nach hintden in die Reihe */
+        }
+    </style>
+    <script>
+        function heideImage1(){
+            document.getElementById('image1').classList.add('display-none');
+            document.getElementById('image3').classList.remove('display-none');
+        }
+
+        function heideImage2(){
+            document.getElementById('image2').classList.add('display-none');
+            document.getElementById('image1').classList.remove('display-none');
+        }
+
+        function heideImage3(){
+            document.getElementById('image3').classList.add('display-none');
+            document.getElementById('image2').classList.remove('display-none');
+
+        }
+    </script>
+</head>
+<body>
+    <img onclick="heideImage1()" class="display-none" id="image1" src="./img/1.png">
+    <img onclick="heideImage2()" class="display-none" id="image2" src="./img/2.png">
+    <img onclick="heideImage3()" id="image3" src="./img/3.png">
+</body>
+</html>

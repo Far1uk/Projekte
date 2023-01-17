@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kommentar</title>
+    <style>
+        .post {
+            width: 500px;
+            height: 150px;
+            margin-top: 32px;
+            padding: 8px;
+            border: 1px solid lightgray;
+        }
+    </style>
+    <script>
+        let myArray = [];
+        let names = [];
+
+        function addPost() {
+            let text = document.getElementById('myInput').value;
+            let name = document.getElementById('name').value;
+            myArray.push(text);
+            names.push(name);
+
+            let myPosts = document.getElementById('myPosts');
+            myPosts.innerHTML = '';
+
+            for (let i = 0; i < myArray.length; i++) {
+                myPosts.innerHTML += `
+                <div class="post">
+                    <b>${names[i]}</b><br>
+                    ${myArray[i]}
+                </div>
+            `;
+            }
+            document.getElementById('myInput').value = '';
+            document.getElementById('name').value = '';
+
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="myInput" placeholder="Neuer Post..">
+    <button onclick="addPost()">Posten</button>
+
+    <div id="myPosts"></div>
+</body>
+
+</html>

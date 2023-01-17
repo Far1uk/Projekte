@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let name = ['Faruk','Svea','Emen'];
+
+        function nameList() {
+            let list = document.getElementById('list'); // die id"list" aus der ul eine variable übergeben
+            list.innerHTML = '';
+
+            for(i = 0; i < name.length; i++) {
+                let li = document.createElement('li'); // ein Element erstellen und einer Variable übergeben
+                li.innerHTML = name[i]; // der variable einen inhalt eingeben
+                list.appendChild(li); // ein Element an eine Liste anhängen
+            }
+        }
+
+        function addName() {
+            let newName = document.getElementById('myInput').value;
+            name.push(newName);
+            nameList();
+            document.getElementById('myInput').value ='' ;
+        }
+    </script>
+</head>
+<body onload="nameList()">
+    <ul id="list"></ul>
+    <input id="myInput"><button onclick="addName()">Add name</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Programmier-Witze</h1>
+    <button onclick="lorem1()">Lorem 1</button>
+    <button onclick="lorem2()">Lorem 2</button>
+
+    <p id="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, veritatis!</p>
+
+    <script>
+        function lorem1(){
+            document.getElementById('lorem').innerHTML = 'Ich bin ein Test!';
+        }
+        function lorem2(){
+            document.getElementById('lorem').innerHTML = 'Ich bin ein Test mit dem aktuellem Wert!';
+        }
+    </script>
+    
+</body>
+</html>

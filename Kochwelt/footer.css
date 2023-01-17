@@ -1,0 +1,129 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content-info-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: #363839;
+}
+
+.footer-col p {
+    width: 200px;
+    color: #bfbfbf;
+    padding: 10px 0;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.footer-col {
+    width: 250px;
+    filter: invert(.5);
+}
+
+.footer-col a {
+    text-decoration: none;
+}
+
+.footer-col p:hover {
+    color: #8c8989;
+    transition: all 225ms ease-in;
+    padding-bottom: 10px;
+}
+
+.footer-col img {
+    width: 100%;
+}
+
+.content-info-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #282a2b;
+}
+
+.content-info-copyright {
+    display: flex;
+    color: #8c8989;
+    gap: 10px;
+}
+
+.content-info-copyright a {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+.content-info-copyright a:hover {
+    color: #8c8989;
+    transition: all 225ms ease-in;
+}
+
+.social-links a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, .2);
+    text-align: center;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #ffffff;
+    transition: all .5s ease-in;
+    margin: 0 5px;
+}
+
+.social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .content-info-bottom {
+        flex-direction: column;
+    }
+    .content-info-copyright {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-info-top {
+        padding: 25px 25px;
+    }
+    .footer-col {
+        width: 150px;
+    }
+    .content-info-bottom {
+        flex-direction: column;
+    }
+    .content-info-copyright {
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-col p {
+        font-size: 12px;
+        width: 100px;
+    }
+    .content-info-bottom {
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+    .content-info-copyright {
+        font-size: 11px;
+        padding-bottom: 5px;
+    }
+    .social-links a {
+        width: 16px;
+        height: 16px;
+        line-height: 13px;
+    }
+
+    .social-links i {
+        font-size: 10px;
+    }
+}

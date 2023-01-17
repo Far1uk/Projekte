@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt - Salat</title>
+    <link rel="icon" href="./img/logo_small.png">
+    <link rel="stylesheet" href="salat.css">
+    <script src="jquery.js"></script>
+    <script src="header.js"></script>
+    <script src="salat.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body onload="init()">
+    <header>
+        <div w3-include-html="header.html"></div>
+    </header>
+    <main>
+        <div id="test" class="first-container">
+            <h1>Brokkoli Salat</h1>
+            <img id="img" class="image-falafel" src="./img/salat.jpg">
+            <div class="row">
+                <div class="col">
+                    <img src="./img/clock-regular.svg">
+                    <p>5 Min.</p>
+                </div>
+                <div class="col">
+                    <img src="./img/brain-solid.svg">
+                    <p>einfach</p>
+                </div>
+                <div class="col">
+                    <img src="./img/calendar-alt-regular.svg">
+                    <p>07.12.2022</p>
+                </div>
+            </div>
+        </div>
+        <div class="second-container">
+            <div class="row">
+                <p>Zutaten für </p>
+                <input type="number" value="1" id="myInput">
+                <button onclick="calculate()"><i class="fa-solid fa-repeat"></i>Portionen</button>
+            </div>
+            <table>
+                <tbody class="first-col" id="first-col"></tbody>
+            </table>
+        </div>
+        <div class="third-container">
+            <h2>Zubereitung</h2>
+            <div class="row">
+                <div class="col">
+                    <img src="./img/clock-regular.svg">
+                    <p>Arbeitszeit 45 Min</p>
+                </div>
+                <div class="col">
+                    <img src="./img/clock-regular.svg">
+                    <p>Gesamtzeit 45 Min.</p>
+                </div>
+            </div>
+            <span>Die Kichererbsen in einer Schüssel mit reichlich kaltem Wasser bedecken und 12 Stunden quellen lassen.
+                Anschließend abtropfen lassen. Das Brot zerkrümeln. Zwiebel und Knoblauch schälen und grob zerkleinern.
+                Petersilie waschen und die Blättchen abzupfen. Brot, Zwiebel, Knoblauch, Petersilie und Kichererbsen im
+                Mixer fein zerkleinern.
+                <br>
+                <br>
+                Das Püree mit Koriander, Kreuzkümmel, Pfeffer und Salz abschmecken und mit Mehl und Backpulver
+                verkneten. Aus dem Teig walnussgroße Bällchen formen.
+                <br>
+                <br>
+                Das Öl zum Frittieren erhitzen. Es ist heiß genug, wenn an einem hölzernen Kochlöffelstiel, den man ins
+                Fett hält, viele Bläschen aufsteigen. Die Falafel darin portionsweise in 4 - 5 Minuten goldbraun
+                frittieren. Jeweils auf einer dicken Lage Küchenpapier abtropfen lassen.
+                <br>
+                <br>
+                Die Zitrone in Schnitze schneiden und die heißen Falafel damit servieren.
+            </span>
+            <div class="profil">
+                <h3>Rezept erstellt von</h3>
+                <img src="./img/profile.png">
+                <p>Faruk</p>
+            </div>
+            <div class="rezept-button">
+                <button><i class="fa-solid fa-print"></i>Drucken/PDF</button>
+                <button><i class="fa-solid fa-share"></i>Teilen</button>
+                <button><i class="fa-solid fa-plus"></i>Planen</button>
+                <button class="button-heart"><i class="fa-solid fa-heart"></i>Rezept speichern</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <header>
+            <div w3-include-html="footer.html"></div>
+        </header>
+    </footer>
+</body>
+
+
+</html>

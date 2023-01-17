@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Funktion rufen andere Funktionen auf</h1>
+
+    <input id="inputField"><button onclick="greetButton()">Grüße</button> <!-- Aus diesem Feld auslesen.. -->
+
+    <p id="greeting"></p>
+
+    <script>
+        function greetButton() {
+            let name = document.getElementById('inputField').value; /* In die Variable Name speichern.. */
+            greet(name); /* Die Variable in die andere Funktion übergeben.. */    
+        }
+
+        function greet(x) { /* x hat den Wert der Variable, die übergeben wurde! */
+            document.getElementById('greeting').innerHTML = `Hallo ${x}`;
+        }
+    </script>
+    
+</body>
+</html>
