@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QuizApp</title>
-    <link rel="icon" href="./img/logo_titel.png">
+    <link rel="icon" href="./img/logo_titel.png" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="fonts.css">
     <script src="script.js"></script>
     <!-- Bootstrap file -->
     <link
@@ -22,17 +21,35 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body onload="init()">
     <div class="container">
       <div class="sidebar">
         <img src="./img/logo_titel.png" class="img-fluid" />
         <h2>QuizApp</h2>
       </div>
-      <div class="content">
-        <div class="col-content">
-          <h1>Willkommen zur QuizApp</h1>
-          <p>Teste dein Wissen rund um unsere digitale Welt!</p>
-          <button type="button" class="btn btn-primary btn-lg">Start</button>
+      <div class="col-question">
+        <h4 id="questionText"></h4>
+        <div class="col-answer">
+          <div class="col-list" onclick="answer('answer_1')">
+            <p>A</p>
+            <p id="answer_1"></p>
+          </div>
+          <div class="col-list" onclick="answer('answer_2')">
+            <p>B</p>
+            <p id="answer_2"></p>
+          </div>
+          <div class="col-list" onclick="answer('answer_3')">
+            <p>C</p>
+            <p id="answer_3"></p>
+          </div>
+          <div class="col-list" onclick="answer('answer_4')">
+            <p>D</p>
+            <p id="answer_4"></p>
+          </div>
+        </div>
+        <div class="questionLength">
+          <span> Frage <b id="countQuestionLenght"></b> von <b id="questionLength"></b> </span>
+          <button onclick="nextQuestion()" id="myBtn" disabled class="btn btn-primary" type="submit">Weiter</button>
         </div>
       </div>
     </div>
