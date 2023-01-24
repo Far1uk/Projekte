@@ -84,7 +84,10 @@ let questions = [
   },
 ];
 
+let rightQuestions = 0;
 let currentQuestion = 0;
+let AUDIO_SUCCESS = new Audio("audio/right.mp3");
+let AUDIO_FAIL = new Audio("audio/fail.mp3");
 
 function init() {
   document.getElementById("questionLength").innerHTML = questions.length;
@@ -92,6 +95,26 @@ function init() {
 }
 
 function showQuestion() {
+  if (gameIsOver()) {
+    showEndScreen();
+  } else {
+    updateProgressBar();
+    updateNextQuestion();
+  }
+}
+
+function gameIsOver() {
+  return currentQuestion >= questions.length;
+}
+
+function updateProgressBar() {
+  let percent = (currentQuestion + 1) / questions.length;
+  percent = Math.round(percent * 100);
+  document.getElementById("progressBar").innerHTML = `${percent}%`;
+  document.getElementById("progressBar").style = `width: ${percent}%;`;
+}
+
+function updateNextQuestion() {
   let countQuestion = questions[currentQuestion];
   document.getElementById("questionText").innerHTML = countQuestion["question"];
   document.getElementById("answer_1").innerHTML = countQuestion["answer_1"];
@@ -101,28 +124,39 @@ function showQuestion() {
   countQuestionLenght();
 }
 
+function showEndScreen() {
+  document.getElementById("col-question").classList.add("d-none");
+  document.getElementById("bg-end-screen").classList.add("d-flex");
+  document.getElementById("amountOfQuestions").innerHTML = questions.length;
+  document.getElementById("amountOfRightQuestions").innerHTML = rightQuestions;
+}
+
 function countQuestionLenght() {
-  document.getElementById('countQuestionLenght').innerHTML = currentQuestion+1;
-  if(currentQuestion > questions.length) {
-    currentQuestion++;
-  }
+  document.getElementById("countQuestionLenght").innerHTML =
+    currentQuestion + 1;
 }
 
 function answer(selection) {
   let countQuestion = questions[currentQuestion];
   let selectQuestionNumber = selection.slice(-1);
-
   let idOfRightAnswer = `answer_${countQuestion["right_answer"]}`;
 
-  if (selectQuestionNumber == countQuestion["right_answer"]) {
+  if (rightSelectedAnswer(selectQuestionNumber,countQuestion)) {
     document.getElementById(selection).parentNode.classList.add("bg-success");
+    AUDIO_SUCCESS.play();
+    rightQuestions++;
   } else {
     document.getElementById(selection).parentNode.classList.add("bg-danger");
     document
       .getElementById(idOfRightAnswer)
       .parentNode.classList.add("bg-success");
+    AUDIO_FAIL.play();
   }
   document.getElementById("myBtn").disabled = false;
+}
+
+function rightSelectedAnswer(selectQuestionNumber, countQuestion) {
+  return selectQuestionNumber == countQuestion["right_answer"];
 }
 
 function nextQuestion() {

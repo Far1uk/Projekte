@@ -27,8 +27,10 @@
         <img src="./img/logo_titel.png" class="img-fluid" />
         <h2>QuizApp</h2>
       </div>
-      <div class="col-question">
-        <h4 id="questionText"></h4>
+      <div id="col-question" class="col-question">
+        <div>
+          <h4 id="questionText"></h4>
+        </div>
         <div class="col-answer">
           <div class="col-list" onclick="answer('answer_1')">
             <p>A</p>
@@ -48,8 +50,40 @@
           </div>
         </div>
         <div class="questionLength">
-          <span> Frage <b id="countQuestionLenght"></b> von <b id="questionLength"></b> </span>
-          <button onclick="nextQuestion()" id="myBtn" disabled class="btn btn-primary" type="submit">Weiter</button>
+          <span>
+            Frage <b id="countQuestionLenght"></b> von
+            <b id="questionLength"></b>
+          </span>
+          <button
+            onclick="nextQuestion()"
+            id="myBtn"
+            disabled
+            class="btn btn-primary"
+            type="submit"
+          >
+            Weiter
+          </button>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" id="progressBar" role="progressbar" style="width: 0%;">25%</div>
+        </div>
+      </div>
+      <div id="bg-end-screen" class="bg-end-screen">
+        <div class="bg-end-screen-content">
+          <img src="./img/Group 5.png" style="width: 50%" />
+          <h1>Glückwunsch!</h1>
+          <div class="bg-end-screen-score">
+            <h3>Your Score</h3>
+            <div class="bg-end-screen-span">
+              <span id="amountOfRightQuestions">/</span>
+              <span>/</span>
+              <span id="amountOfQuestions"></span>
+            </div>
+          </div>
+          <div class="bg-end-screen-button">
+            <button>Share</button>
+            <a href="index.html">Replay</a>
+          </div>
         </div>
       </div>
     </div>
