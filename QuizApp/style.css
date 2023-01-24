@@ -67,12 +67,15 @@
   padding: 20px;
 }
 
-#questionText {
+.questionText {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
   height: 20vh;
+}
+
+#questionText {
   font-family: "Rubik";
   font-style: normal;
   font-weight: 900;
@@ -215,4 +218,36 @@
 
 .d-flex {
   display: flex;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    justify-content: flex-start;
+  }
+  .col-question {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-question {
+    width: 70vw;
+  }
+  .sidebar > h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 478px) {
+  .sidebar > h2 {
+    font-size: 16px;
+  }
+  .questionLength {
+    margin-top: 24px;
+    width: 100%;
+  }
+  .col-list {
+    width: 100%;
+  }
 }
